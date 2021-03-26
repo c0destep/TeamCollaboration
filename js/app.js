@@ -1,3 +1,27 @@
+let app_phyto = document.getElementById('app_phyto');
+let app_bits = document.getElementById('app_bits');
+let app_miguel = document.getElementById('app_miguel');
+let app_marcelo = document.getElementById('app_marcelo');
+let app_fabin = document.getElementById('app_fabin');
+
+app_phyto.addEventListener('click', () => showModal('phytoModal'));
+app_bits.addEventListener('click', () => showModal('bitsModal'));
+app_miguel.addEventListener('click', () => showModal('miguelModal'));
+app_marcelo.addEventListener('click', () => showModal('marceloModal'));
+app_fabin.addEventListener('click', () => showModal('fabinModal'));
+
+function showModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.classList.add('show');
+        modal.addEventListener('click', (e) => {
+            if ((e.target.id == modalId ) || (e.target.id == 'close')) {
+                modal.classList.remove('show');
+            }
+        })
+    }
+}
+
 function bits() {
     let inverter = document.querySelector(".conteudo__inverter");
     inverter.addEventListener("click", (event) => {
