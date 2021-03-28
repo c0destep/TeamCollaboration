@@ -1,3 +1,16 @@
+@font-face {
+	@import url('../fonts/Open_Sans/OpenSans-Regular.ttf');
+	@import url('../fonts/Open_Sans/OpenSans-SemiBold.ttf');
+	@import url('../fonts/Open_Sans/OpenSans-SemiBoldItalic.ttf');
+	@import url('../fonts/Open_Sans/OpenSans-Bold.ttf');
+	@import url('../fonts/Open_Sans/OpenSans-BoldItalic.ttf');
+	@import url('../fonts/Open_Sans/OpenSans-ExtraBold.ttf');
+	@import url('../fonts/Open_Sans/OpenSans-ExtraBoldItalic.ttf');
+	@import url('../fonts/Open_Sans/OpenSans-Italic.ttf');
+	@import url('../fonts/Open_Sans/OpenSans-Light.ttf');
+	@import url('../fonts/Open_Sans/OpenSans-LightItalic.ttf');
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -7,8 +20,7 @@
 body {
 	background-color: #2e343a;
 	color: rgb(255, 255, 255);
-	font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	text-align: center;
 }
 
@@ -26,11 +38,12 @@ body {
 
 .sub-title .dev {
 	background-color: #e9db1f;
-	color: rgba(0, 0, 0, 0.8);
+	color: rgba(0, 0, 0, 0.7);
 	width: 10px;
 	height: 10px;
 	border-radius: 10%;
 	margin-left: 5px;
+	padding: .3rem;
 }
 
 .container {
@@ -176,6 +189,8 @@ a {
 	width: 100%;
 	padding: 20px 10px;
 	text-align: justify;
+	display: flex;
+	flex-direction: row;
 }
 
 .modal-footer {
@@ -215,4 +230,48 @@ a {
 
 .modal-container.show .modal-content {
 	animation: show-modal 1s;
+}
+
+.result {
+	width: 50%;
+	height: 50px;
+	border: 2px solid rgba(255, 255, 255, 0.75);
+	border-radius: 5px;
+	padding: 10px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.5em;
+	margin-right: 5px;
+	background-color: rgba(0,0,0,.2);
+}
+
+.form {
+	width: 50%;
+	margin: auto;
+}
+
+.form-input {
+	width: 50%;
+	height: 40px;
+	background-color: #2e343a;
+	border: 2px solid rgba(255, 255, 255, 0.75);
+	border-radius: 5px;
+	color: #fff;
+	outline: none;
+	font-size: 1em;
+	padding: .5em;
+}
+
+.form-select {
+	width: 48%;
+	height: 40px;
+	background-color: #2e343a;
+	border: 2px solid rgba(255, 255, 255, 0.75);
+	border-radius: 5px;
+	color: #fff;
+	outline: none;
+	font-size: 1em;
+	padding: .5em;
+	appearance: none;
+	cursor: pointer;
+	background-color: transparent;
 }

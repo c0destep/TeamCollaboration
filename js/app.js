@@ -24,6 +24,7 @@ function showModal(modalId) {
 
 function bits() {
     let inverter = document.querySelector(".conteudo__inverter");
+
     inverter.addEventListener("click", (event) => {
         let unidade1 = document.querySelector(".conversor__lista1").value;
         let unidade2 = document.querySelector(".conversor__lista2").value;
@@ -84,27 +85,28 @@ function bits() {
     };
 }
 
-function marcelo() {
-    let botao = document.querySelector('.botao')
-    botao.addEventListener('click', function () {
-        let moeda = document.getElementById('entrada')
-        let entrada = document.querySelector('.moedas').value;
-        let url = `https://economia.awesomeapi.com.br/all/${entrada}`;
-        let xhr = new XMLHttpRequest();
-        xhr.open('GET', url, true);
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState == 4) {
-                if (xhr.status = 200) calculo(JSON.parse(xhr.responseText), entrada);
-            }
-        }
-        xhr.send();
-    })
+let button = document.querySelector('#btn-exec-marcelo');
 
-    function calculo(calcular, teste) {
-        let entrada = teste.replace('-BRL', '')
-        let moeda = parseFloat(calcular[entrada].bid)
-        let realValor = document.querySelector('#entrada').value
-        let resultado = realValor * moeda
-        document.querySelector('.resultado').innerHTML = resultado
+button.addEventListener('click', () => {
+    let coin = document.querySelector('#coin').value;
+    let url = `https://economia.awesomeapi.com.br/all/${coin}`;
+    let xhr = new XMLHttpRequest();
+
+    xhr.open('GET', url, true);
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4) {
+            if (xhr.status = 200) converter(JSON.parse(xhr.responseText), coin);
+        }
     }
+
+    xhr.send();
+});
+
+function converter(priceDolar, coin) {
+    let coin_BRL = coin.replace('-BRL', '');
+    let coinResult = parseFloat(priceDolar[coin_BRL].bid);
+    let moneyReal = document.querySelector('#money').value;
+    let result = moneyReal * coinResult;
+
+    document.querySelector('.result').innerHTML = result.toFixed(2);
 }

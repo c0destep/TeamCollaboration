@@ -16,14 +16,14 @@
 	</h1>
 
 	<h3 class="sub-title">
-		Imersão<span class="dev">Dev</span> Alura
+		Imersão<span class="dev">Dev_</span> Alura
 	</h3>
 
 	<div class="container">
-		<div class="thiago">
-			<img src="https://img.ibxk.com.br/2017/06/22/22100428046161.jpg" class="foto">
+		<div class="fabin">
+			<img src="images/fabin.png" class="foto">
 			<div class="about">
-				<span class="occupation">Desenvolvedor</span>
+				<span class="occupation">Estudante</span>
 				<br>
 				<span class="name">Fabin</span>
 			</div>
@@ -44,21 +44,21 @@
 			</div>
 		</div>
 		<div class="marcelo">
-			<img src="https://img.ibxk.com.br/2017/06/22/22100428046161.jpg" class="foto">
+			<img src="images/marcelo.png" class="foto">
 			<div class="about">
-				<span class="occupation">Desenvolvedor</span>
+				<span class="occupation">Desenvolvedor Front-End</span>
 				<br>
 				<span class="name">Marcelo</span>
 			</div>
 			<button id="app_marcelo" type="button" class="btn">App</button>
 			<div class="social">
-				<a href="">
+				<a href="https://github.com/marcellogcb">
 					<ion-icon id="github" name="logo-github"></ion-icon>
 				</a>
 				<a href="#">
 					<ion-icon id="discord" name="logo-discord"></ion-icon>
 				</a>
-				<a href="#">
+				<a href="https://www.linkedin.com/in/marcellogcb/">
 					<ion-icon id="linkedin" name="logo-linkedin"></ion-icon>
 				</a>
 				<a href="#">
@@ -66,12 +66,12 @@
 				</a>
 			</div>
 		</div>
-		<div class="miguel">
+		<div class="tiago">
 			<img src="https://img.ibxk.com.br/2017/06/22/22100428046161.jpg" class="foto">
 			<div class="about">
-				<span class="occupation">Desenvolvedor</span>
+				<span class="occupation">Estudante</span>
 				<br>
-				<span class="name">Miguel</span>
+				<span class="name">Tiago</span>
 			</div>
 			<button id="app_miguel" type="button" class="btn">App</button>
 			<div class="social">
@@ -90,9 +90,9 @@
 			</div>
 		</div>
 		<div class="bits">
-			<img src="https://img.ibxk.com.br/2017/06/22/22100428046161.jpg" class="foto">
+			<img src="images/32bits.png" class="foto">
 			<div class="about">
-				<span class="occupation">Desenvolvedor</span>
+				<span class="occupation">Estudante</span>
 				<br>
 				<span class="name">32 Bits</span>
 			</div>
@@ -104,7 +104,7 @@
 				<a href="#">
 					<ion-icon id="discord" name="logo-discord"></ion-icon>
 				</a>
-				<a href="#">
+				<a href="https://www.linkedin.com/in/samuel-santos-67a31a115/">
 					<ion-icon id="linkedin" name="logo-linkedin"></ion-icon>
 				</a>
 				<a href="#">
@@ -115,7 +115,7 @@
 		<div class="phytoline">
 			<img src="images/phytoline.jpg" class="foto">
 			<div class="about">
-				<span class="occupation">Desenvolvedor</span>
+				<span class="occupation">Desenvolvedor Fullstack</span>
 				<br>
 				<span class="name">Phytoline</span>
 			</div>
@@ -171,7 +171,7 @@
 			</div>
 			<div class="modal-body">
 				<p>
-					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum iste excepturi maxime ex quidem delectus magni doloribus praesentium, molestiae tempore, voluptatibus alias a ab vero, magnam sint placeat id accusantium.
+					
 				</p>
 			</div>
 			<div class="modal-footer">
@@ -190,15 +190,20 @@
 				<ion-icon id="close" name="close-outline"></ion-icon>
 			</button>
 			<div class="modal-title">
-				<h1>APP do Marcelo</h1>
+				<h1>Conversão de Moedas</h1>
 			</div>
 			<div class="modal-body">
-				<p>
-					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum iste excepturi maxime ex quidem delectus magni doloribus praesentium, molestiae tempore, voluptatibus alias a ab vero, magnam sint placeat id accusantium.
-				</p>
+				<div class="result"></div>
+				<div class="form">
+					<input id="money" type="text" class="form-input">
+					<select class="form-select" id="coin">
+						<option value="USD-BRL">Dólar to Real</option>
+						<option value="EUR-BRL">Euro to Real</option>
+					</select>
+				</div>
 			</div>
 			<div class="modal-footer">
-				<button class="btn btn-exec">
+				<button id="btn-exec-marcelo" class="btn btn-exec">
 					Executar
 				</button>
 			</div>
